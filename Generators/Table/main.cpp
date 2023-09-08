@@ -3,6 +3,10 @@
 
 #include "Table.hpp"
 
+#ifndef DB_PATH
+# define DB_PATH "/var/lib/mydatabase/"
+#endif
+
 
 void    isTableNameValid(const std::string& tableName)
 {
