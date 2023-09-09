@@ -1,0 +1,48 @@
+
+DATABASE MANAGER:
+
+    Actions:
+
+        - List all of the databases
+        - Create a new database
+        - Delete a database
+        - Change database name
+
+    Properties:
+
+        DATABASE [],
+        
+
+
+DATABASE:
+
+    Actions:
+
+        - List all of the tables
+        - Create a new database
+        - Delete a database
+        - Change database name
+
+    Properties: 
+
+
+
+TABLES/ENTITIES:
+
+    Actions:
+
+    Properties:
+
+
+FIELDS:
+
+    Actions:
+
+
+
+
+
+    Properties:
+
+
+

@@ -16,8 +16,10 @@
 class Database {
 
     public:
-        Database() {};
 
+        Database() {
+
+        };
 
         void    listDatabases()
         {
@@ -26,7 +28,6 @@ class Database {
                 std::cout << file.path() << std::endl;
             }
         }
-
 
         std::vector<std::string>    getDatabases()
         {
@@ -48,10 +49,18 @@ class Database {
             std::vector<std::string> databases = getDatabases();
 
             if (std::find(databases.begin(), databases.end(), dbName) != databases.end())
-                throw std   ::invalid_argument("Database name " + dbName + " already exists");
+                throw std::invalid_argument("Database name " + dbName + " already exists");
+
+        }
+
+        void    setDatabaseName(const std::string& dbName)
+        {
+            _dbName = dbName;
         }
     
     private:
+
+        std::string _dbName;
 
 };
 

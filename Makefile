@@ -17,4 +17,9 @@ VARS = -DDB_PATH=$(DB_PATH)
 
 compile_generators:
 
+
+
+run_test:
+	g++ -o test -DDB_PATH=/usr/lib/mydatabase/testing/ test.cpp DatabaseManager.hpp -lgtest -lgtest_main -pthread
+
 	
