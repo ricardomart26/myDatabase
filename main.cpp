@@ -52,12 +52,10 @@
 
 #include "DatabaseManager.hpp"
 
-
-
-
 int main(int argc, char **argv)
 {
     DatabaseManager *dbManager = new DatabaseManager();
 
-    dbManager->getAllDatabases();
+    std::vector<Database*> dbs = dbManager->getAllDatabases();
+
 }

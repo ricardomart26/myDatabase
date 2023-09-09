@@ -29,7 +29,7 @@ class User : public EntityBase
 
         void create()
         {
-
+            
         }
         
         void destroy()
@@ -39,7 +39,7 @@ class User : public EntityBase
         
         void update()
         {
-            
+
         }
 
         std::string getEntityName() const 

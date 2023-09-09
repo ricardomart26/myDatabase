@@ -67,6 +67,15 @@ class DatabaseManager {
 
         }
 
+        Database *getOrCreateDatabase(const std::string dbName)
+        {
+            Database *db = getDatabaseByName(dbName);
+
+            if (db == nullptr)
+                db = createDatabase(dbName);
+            return db;
+        }
+
         Database *createDatabase(const std::string name)
         {
             try {

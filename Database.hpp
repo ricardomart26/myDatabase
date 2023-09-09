@@ -49,12 +49,12 @@ class Database {
         {
             _sep = sep;
             _dbName = dbName;
-            _fd = std::fstream(_dbName);
 
         }
 
         void openConnection()
         {
+            _fd = std::fstream(_dbName);
             if (_fd.is_open())
                 throw std::runtime_error("openConnection() failed: connection already open");
             if (access(_dbName.c_str(), F_OK) == -1)
@@ -63,6 +63,10 @@ class Database {
                 _fd.open(_dbName.c_str(), std::fstream::app);
         
         }
+
+        // DbStatus getDatabase() {
+
+        // }
 
         std::string getDatabaseName() const {
             return _dbName;
